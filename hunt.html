@@ -22,49 +22,99 @@
 <body style="margin-left: 10px; background-color: rgb(126, 134, 146);">
     <h2>Bird hunt by Tulam</h2>
     <p class="lead">Click on the squares to search for a bird.</p>
-        <p class="shakes" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"">Number of shakes is zero.</p>
-        <p class="score" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Location score is unknown.</p>
+        <p class="shakes" id="shakes" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Number of shakes : 0</p>
+        <p class="score" id="score" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Location score is unknown.</p>
 <hr>
 <div class="image-grid d-flex flex-column justify-content-center align-items-center"></div>
     <div class="row">
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "0"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "1"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "2"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "3"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "4"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "0" onclick="check(0)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "1" onclick="check(1)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "2" onclick="check(2)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "3" onclick="check(3)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "4" onclick="check(4)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+    
     </div>
     <div class="row">
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "5"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "6"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "7"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "8"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "9"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "5" onclick="check(5)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "6" onclick="check(6)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "7" onclick="check(7)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "8" onclick="check(8)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "9" onclick="check(9)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
        
     </div>
     <div class="row">
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "10"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "11"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "12"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "13"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "14"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "10" onclick="check(10)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "11" onclick="check(11)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "12" onclick="check(12)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "13"  onclick="check(13)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "14" onclick="check(14)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
         
     </div>
     <div class="row">
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "15"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "16"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "17"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "18"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "19"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "15" onclick="check(15)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "16" onclick="check(16)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "17" onclick="check(17)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "18" onclick="check(18)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "19" onclick="check(19)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
     </div>
      <div class="row">
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "20"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "21"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "22"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "23"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
-        <div class="col-sm-1"><img src="images/testImage.jpg" id = "24"   alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "20" onclick="check(20)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "21" onclick="check(21)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "22" onclick="check(22)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "23" onclick="check(23)"  alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
+        <div class="col-sm-1"><img src="images/testImage.jpg" id = "24"  onclick="check(24)" alt="image" style="width: 100px;height: 100px; padding-bottom: 5%;"></div>
 
     </div>
+    <script>
+
+
+let ids=["0","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24"];
+
+let shakeCount=0,birdLocation=2,score
+function check(position){
+    shakeCount++;
+    let id=ids[position];
+    if(id!=birdLocation){
+        document.getElementById(id).src="images/nest.jpg";
+    }
+    else
+    {
+        document.getElementById(id).src="images/magpie.jpg";
+    }
+    document.getElementById('shakes').innerHTML="Number of shakes : "+shakeCount;
+
+    document.getElementById('score').innerHTML="Location score : "+locationScore(position,birdLocation)
+}
+
+
+function locationScore(pos1,pos2){
+  //to check column
+  score=0
+  let diff=pos1-pos2
+   if(pos1%5===pos2%5){
+      score=1;  
+   }//to check column ends
+   //to check row
+   if(pos1<pos2){      
+      let rem=Math.floor(pos2/5)
+      for (let i = 0; i <5; i++) {
+         if((rem*5+i)===pos1){
+        score=1;}}}
+    else if (pos1>pos2){        
+        let rem=Math.floor(pos1/5)
+      for (let i = 0; i <5; i++) {
+         if((rem*5+i)===pos2){
+        score=1;}}
+}//to check row ends
+//to check diagnally
+if(diff==6 || diff==-6 || diff==4 || diff==-4){
+    score=1;   
+}//to check diagnally ends 
+  return score
+    }
+
+
+    </script>
 
 </body>
 </html>
