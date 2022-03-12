@@ -9,23 +9,54 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="margin-left: 10px; background-color: rgb(126, 134, 146);">
 
   <h2>Suresh Tulam reaction Timer</h2>
 <p id="target">Your Time :</p>
 <p id="countdown">Count :</p>
 
-<button>Start Timer</button>
+<button onclick="startTime()">Start Timer</button>
 <button onclick="recordReact()">React Now</button>
 
 
 <script>
-let myTime
+let myTime=undefined
 function recordReact(){
     myTime=Date.now()
 
     console.log(myTime);
 }
+
+function startTime(){
+    
+  for(let i=0;i<4;i++){
+    setTimeout(()=>{
+      document.getElementById('countdown').innerHTML="Count : "+i;
+    },1000*(3-i))
+  }
+
+  setTimeout(()=>{
+    
+     if(myTime===undefined){
+       document.getElementById('target').innerHTML="Your Time : Too slow"
+
+       setTimeout(()=>{
+         location.reload()
+       },2000)
+     }
+     else{
+       let buttonTime=Date.now()
+       document.getElementById('target').innerHTML="Time was :"+(buttonTime-myTime)
+       setTimeout(()=>{
+         location.reload()
+       },2000)
+     
+   }
+  },3000)
+}
+
+
+
 
 
 
