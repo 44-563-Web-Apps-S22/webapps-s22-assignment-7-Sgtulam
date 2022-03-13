@@ -17,8 +17,8 @@
 
 <button onclick="startTime()">Start Timer</button>
 <button onclick="recordReact()">React Now</button>
-
-
+<HR></HR>
+<p>Page Reloads Automatically at the END </p>
 <script>
 let myTime=undefined
 function recordReact(){
@@ -28,11 +28,11 @@ function recordReact(){
 }
 
 function startTime(){
-    
-  for(let i=0;i<4;i++){
+    let count=Math.floor(Math.random() * 9);count=count+2;
+  for(let i=0;i<count;i++){
     setTimeout(()=>{
       document.getElementById('countdown').innerHTML="Count : "+i;
-    },1000*(3-i))
+    },1000*(count-i))
   }
 
   setTimeout(()=>{
@@ -52,7 +52,7 @@ function startTime(){
        },2000)
      
    }
-  },3000)
+  },count*1000)
 }
 
 
