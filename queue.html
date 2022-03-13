@@ -55,32 +55,24 @@
 
 
 function zap(){
-	let queueItems=document.getElementsByClassName('queue')
+	let queueItems=document.getElementsByClassName('queue'),len=queueItems.length
 	let userIn=document.getElementById('userInput').value
-	let len=queueItems.length
-	
 	// queueItems.forEach(element => {
 	// 	if(element.innerHTML==userIn){
     //         element.remove
 	// 	}
 	// });
-
-
-
 	for(let i=0;i<len;i++){
 		if(queueItems[i].innerHTML==userIn){
 			console.log(queueItems[i].innerHTML)
 			queueItems[i].remove();
-			i--
-		}
-	}
-
-}
+			i-- //to remove all 
+		}}}
 
 function FetchItem(){
 
-	let queueItems=document.getElementsByClassName('queue')
-	let k=queueItems.length
+	let queueItems=document.getElementsByClassName('queue'),k=queueItems.length
+	
 	if(k>=1){
 		queueItems[k-1].remove()
 
