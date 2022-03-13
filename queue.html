@@ -6,7 +6,7 @@
     <style>
     .flex-container {
       display: flex;  flex-direction:row;
-      background-color: red;
+      background-color: rgb(132, 163, 202);
   }
 
 .flex-container > div {  /*div children of the flex container*/
@@ -58,15 +58,20 @@ function zap(){
 	let queueItems=document.getElementsByClassName('queue')
 	let userIn=document.getElementById('userInput').value
 	let len=queueItems.length
+	
 	// queueItems.forEach(element => {
 	// 	if(element.innerHTML==userIn){
     //         element.remove
 	// 	}
 	// });
 
+
+
 	for(let i=0;i<len;i++){
 		if(queueItems[i].innerHTML==userIn){
-			queueItems[i].remove()
+			console.log(queueItems[i].innerHTML)
+			queueItems[i].remove();
+			i--
 		}
 	}
 
