@@ -72,7 +72,7 @@ function getUnique(){
 }
 
 function zap(){
-	
+	let queueItems=document.getElementsByClassName('queue'),len=queueItems.length
 	let userIn=document.getElementById('userInput').value
 	// queueItems.forEach(element => {
 	// 	if(element.innerHTML==userIn){
@@ -84,6 +84,7 @@ function zap(){
 			console.log(queueItems[i].innerHTML)
 			queueItems[i].remove();
 			i-- //to remove all 
+			len--;
 		}}}
 
 function FetchItem(){
