@@ -25,7 +25,7 @@
 
 
 
-<body>
+<body style="margin-left: 10px; background-color: rgb(126, 134, 146);">
 
 
     <h2>Suresh Tulam builds a
@@ -41,27 +41,48 @@
 
         <input type="text" id="userInput">
 		<button onclick="makeNewDiv()">Add Value</button>
+
+
+		<br>
+
+		<button onclick="FetchItem()">Fetch</button>
+		<button onclick="zap()">Zap Values</button>
 	
 	
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
+
+
+function zap(){
+	let queueItems=document.getElementsByClassName('queue')
+	let userIn=document.getElementById('userInput').value
+	let len=queueItems.length
+	// queueItems.forEach(element => {
+	// 	if(element.innerHTML==userIn){
+    //         element.remove
+	// 	}
+	// });
+
+	for(let i=0;i<len;i++){
+		if(queueItems[i].innerHTML==userIn){
+			queueItems[i].remove()
+		}
+	}
+
+}
+
+function FetchItem(){
+
+	let queueItems=document.getElementsByClassName('queue')
+	let k=queueItems.length
+	if(k>=1){
+		queueItems[k-1].remove()
+
+	}
+}
+
+
 	function makeNewDiv(){
 		/* make the div and its text */
 		let element = document.createElement("div")

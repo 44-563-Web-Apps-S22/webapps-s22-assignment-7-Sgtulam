@@ -73,30 +73,26 @@ let ids=["0","1","2","3","4","5","6",
 "15","16","17","18","19","20","21","22",
 "23","24"];
 
-let shakeCount=0,birdLocation=2,score
+let shakeCount=0,birdLocation=18,score
 function check(position){
-    shakeCount++;
-    let id=ids[position];
-    if(id!=birdLocation){
-        document.getElementById(id).src="images/nest.jpg";
+    shakeCount++; let id=ids[position];
+    if(id!=birdLocation){        document.getElementById(id).src="images/nest.jpg";
     }
     else
-    {
-        document.getElementById(id).src="images/magpie.jpg";
+    {        document.getElementById(id).src="images/magpie.jpg";
     }
     document.getElementById('shakes').innerHTML="Number of shakes : "+shakeCount;
-
     document.getElementById('score').innerHTML="Location score : "+locationScore(position,birdLocation)
 }
 
 
-function locationScore(pos1,pos2){
- 
+function locationScore(pos1,pos2){ 
   score=0
   let diff=pos1-pos2
+  //to check row
    if(pos1%5===pos2%5){
-      score=1;  
-   }
+      score=1;}
+   //tocheck column
    if(pos1<pos2){      
       let rem=Math.floor(pos2/5)
       for (let i = 0; i <5; i++) {
@@ -106,13 +102,11 @@ function locationScore(pos1,pos2){
         let rem=Math.floor(pos1/5)
       for (let i = 0; i <5; i++) {
          if((rem*5+i)===pos2){
-        score=1;}}
-}
+        score=1;}}}
+//to check diag
 if(diff==6 || diff==-6 || diff==4 || diff==-4){
     score=1;   
-}
-  return score
-    }
+} return score}
 
 
     </script>
