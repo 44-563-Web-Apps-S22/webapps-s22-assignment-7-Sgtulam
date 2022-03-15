@@ -92,10 +92,10 @@ function check(position){
 function locationScore(pos1,pos2){ 
   score=0
   let diff=pos1-pos2
-  //to check row
+  //to check column
    if(pos1%5===pos2%5){
       score=1;}
-   //tocheck column
+   //tocheck row
    if(pos1<pos2){      
       let rem=Math.floor(pos2/5)
       for (let i = 0; i <5; i++) {
