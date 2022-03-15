@@ -99,7 +99,10 @@ function FetchItem(){
 
 
 	function makeNewDiv(){
-		/* make the div and its text */
+	
+		
+		if(document.getElementById('userInput').value.length!=0){
+			/* make the div and its text */
 		let element = document.createElement("div")
 		element.innerHTML = document.getElementById('userInput').value
         element.className='queue'
@@ -108,7 +111,9 @@ function FetchItem(){
 		/* add it to the container */
 		let container = document.getElementById('target')
 		container.insertBefore(element,container.firstChild)
-		
+		}
+		 else 
+		 alert("please enter input value")
 	}
 </script>
 </html>	
